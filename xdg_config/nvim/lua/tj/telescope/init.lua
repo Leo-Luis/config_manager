@@ -103,7 +103,7 @@ pcall(require('telescope').load_extension, "dap")
 pcall(require('telescope').load_extension, "arecibo")
 
 require('telescope').load_extension('fzf')
-require('telescope').load_extension('octo')
+--require('telescope').load_extension('octo')
 
 if pcall(require('telescope').load_extension, 'frecency') then
   require('tj.telescope.frecency')

@@ -151,24 +151,24 @@ GoRootDir = function(fname)
   return lspconfig_util.root_pattern("go.mod", ".git")(fname)
 end
 
-lspconfig.gopls.setup {
-  on_init = custom_init,
-  on_attach = custom_attach,
+--lspconfig.gopls.setup {
+--  on_init = custom_init,
+--  on_attach = custom_attach,
 
-  capabilities = updated_capabilities,
-  root_dir = GoRootDir,
+--  capabilities = updated_capabilities,
+--  root_dir = GoRootDir,
 
-  settings = {
-    gopls = {
-      codelenses = { test = true },
-    }
-  },
-}
+--  settings = {
+--    gopls = {
+--      codelenses = { test = true },
+--    }
+--  },
+--}
 
-lspconfig.gdscript.setup {
-  on_init = custom_init,
-  on_attach = custom_attach,
-}
+--lspconfig.gdscript.setup {
+--  on_init = custom_init,
+--  on_attach = custom_attach,
+--}
 
 -- Load lua configuration from nlua.
 require('nlua.lsp.nvim').setup(lspconfig, {
@@ -242,12 +242,12 @@ if 1 == vim.fn.executable('cmake-language-server') then
   }
 end
 
-lspconfig.rust_analyzer.setup({
-  cmd = {"rust-analyzer"},
-  filetypes = {"rust"},
-  on_init = custom_init,
-  on_attach = custom_attach,
-})
+--lspconfig.rust_analyzer.setup({
+--  cmd = {"rust-analyzer"},
+--  filetypes = {"rust"},
+--  on_init = custom_init,
+--  on_attach = custom_attach,
+--})
 
 --[[
 Example settings, have not messed around with too many of these.
