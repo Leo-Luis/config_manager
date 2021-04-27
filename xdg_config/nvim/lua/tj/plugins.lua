@@ -12,7 +12,7 @@ return require('packer').startup {
       local plug_path, home
       if second == nil then
         plug_path = first
-        home = 'tjdevries'
+        home = 'candy'
       else
         plug_path = second
         home = first
@@ -34,7 +34,7 @@ return require('packer').startup {
     local_use 'apyrori.nvim'
     local_use 'py_package.nvim'
     local_use 'manillua.nvim'
-    local_use 'cyclist.vim'
+--    local_use 'cyclist.vim'
     local_use 'bandaid.nvim'
     local_use 'train.vim'
     local_use 'express_line.nvim'
@@ -71,7 +71,7 @@ return require('packer').startup {
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = "make", }
     local_use('nvim-telescope', 'telescope-fzf-writer.nvim')
     local_use('nvim-telescope', 'telescope-packer.nvim')
-    local_use('nvim-telescope', 'telescope-async-sorter-test.nvim')
+    --local_use('nvim-telescope', 'telescope-async-sorter-test.nvim')
 
     local_use('nvim-telescope', 'telescope-github.nvim')
     local_use('nvim-telescope', 'telescope-symbols.nvim')
@@ -326,8 +326,8 @@ return require('packer').startup {
 
 
     -- Github integration
-    use 'pwntester/octo.nvim'
-    use 'ruifm/gitlinker.nvim'
+    --use 'pwntester/octo.nvim'
+    --use 'ruifm/gitlinker.nvim'
 
     -- Sweet message committer
     use 'rhysd/committia.vim'

@@ -6,6 +6,8 @@ if not has_lsp then
   return
 end
 
+local sumneko_root_path = '/home/candy/.local/src/lua-language-server'
+local sumneko_binary = sumneko_root_path .. "/bin/Linux/lua-language-server"
 local nvim_status = require('lsp-status')
 
 local telescope_mapper = require('tj.telescope.mappings')
@@ -172,10 +174,11 @@ lspconfig.gdscript.setup {
 require('nlua.lsp.nvim').setup(lspconfig, {
   on_init = custom_init,
   on_attach = custom_attach,
+  cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"},
 
   root_dir = function(fname)
     if string.find(vim.fn.fnamemodify(fname, ":p"), "xdg_config/nvim/") then
-      return vim.fn.expand("~/git/config_manager/xdg_config/nvim/")
+      return vim.fn.expand("~/.local/src/config_manager/xdg_config/nvim/")
     end
 
     -- ~/git/config_manager/xdg_config/nvim/...

@@ -2,7 +2,7 @@ local dap = require('dap')
 
 -- TODO: How does terminal work?
 dap.defaults.fallback.external_terminal = {
-  command = '/home/tjdevries/.local/bin/kitty',
+  command = '/usr/local/bin/st',
   args = {'-e'};
 }
 
@@ -61,7 +61,7 @@ dap.configurations.c = {
     name = "Launch binary nvim",
     type = 'c',
     request = 'launch',
-    program = './build/bin/nvim',
+    program = '$HOME/.local/src/neovim/build/bin/nvim',
     args = {
       '--headless',
       '-c', 'echo getcompletion("vim.api.nvim_buf_", "lua")',
@@ -76,8 +76,8 @@ dap.configurations.c = {
     name = "Deprecated",
     type = 'c',
     request = 'attach',
-    program = './build/bin/nvim',
-    cwd = vim.fn.expand("~/build/neovim/"),
+    program = '$HOME/.local/src/neovim/build/bin/nvim',
+    cwd = vim.fn.expand("$HOME/.local/src/neovim/build/bin/nvim"),
     -- environment = nil,
     externalConsole = false,
     MIMode = 'gdb',
@@ -86,7 +86,7 @@ dap.configurations.c = {
     name = "Attach to Neovim",
     type = "c",
     request = "attach",
-    program = vim.fn.expand("~/build/neovim/build/bin/nvim"),
+    program = vim.fn.expand("$HOME/.local/src/neovim/build/bin/nvim"),
     cwd = vim.fn.getcwd(),
     externalConsole = true,
     MIMode = "gdb"
@@ -161,11 +161,12 @@ dap.configurations.c = {
   {
     type = "c",
     request = "attach",
-    program = "./build/bin/nvim",
+    program = "~/.local/src/neovim/build/neovim/build/bin/nvim",
     name = "Attach to gdbserver::Neovim",
     target = "localhost:7777",
     remote = true,
-    cwd = vim.fn.expand("~/build/neovim"),
+    --cwd = vim.fn.expand("~/build/neovim"),
+    cwd = vim.fn.expand("~/.local/src/neovim"),
     gdbpath = vim.fn.exepath("gdb"),
   }
 }
