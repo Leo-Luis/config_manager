@@ -26,7 +26,8 @@ return require('packer').startup {
     end
 
     -- My Plugins
-    --local_use 'nlua.nvim'
+    -- local_use 'nlua.nvim'
+    local_use 'tjdevries/nlua.nvim'
     local_use 'vlog.nvim'
     -- local_use 'vim9jit'
     local_use 'colorbuddy.nvim'

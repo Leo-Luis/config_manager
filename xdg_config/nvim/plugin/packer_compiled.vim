@@ -108,10 +108,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/astronauta.nvim"
   },
-  ["bandaid.nvim"] = {
-    loaded = true,
-    path = "/home/candy/.local/share/nvim/site/pack/packer/start/bandaid.nvim"
-  },
   ["colorbuddy.nvim"] = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim"
@@ -372,10 +368,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/standard.vim"
   },
-  ["streamer.nvim"] = {
-    loaded = true,
-    path = "/home/candy/.local/share/nvim/site/pack/packer/start/streamer.nvim"
-  },
   ["tabline.vim"] = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/tabline.vim"
@@ -589,10 +581,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/vim-toml"
   },
-  vim9jit = {
-    loaded = true,
-    path = "/home/candy/.local/share/nvim/site/pack/packer/start/vim9jit"
-  },
   ["vista.vim"] = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/vista.vim"
@@ -612,8 +600,8 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time("Defining lazy-load filetype autocommands", true)
-vim.cmd [[au FileType html ++once lua require("packer.load")({'vim-javascript'}, { ft = "html" }, _G.packer_plugins)]]
 vim.cmd [[au FileType javascript ++once lua require("packer.load")({'JavaScript-Indent', 'vim-javascript'}, { ft = "javascript" }, _G.packer_plugins)]]
+vim.cmd [[au FileType html ++once lua require("packer.load")({'vim-javascript'}, { ft = "html" }, _G.packer_plugins)]]
 time("Defining lazy-load filetype autocommands", false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
