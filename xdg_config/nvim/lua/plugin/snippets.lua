@@ -60,8 +60,10 @@ require'snippets'.set_ux(require'snippets.inserters.floaty')
 
 -- Shortcuts for me to edit the snippet files
 --  Could possibly use fzf or something for this, but this seemds good for now.
-vim.cmd [[nnoremap ,se :e ~/.config/nvim/lua/tj/snippets.lua<CR>]]
-vim.cmd [[nnoremap ,sn :e ~/plugins/nlua.nvim/lua/nlua/snippets.lua<CR>]]
+-- LLocal  
+--  TODO: find alternatives
+--vim.cmd [[nnoremap ,se :e ~/.config/nvim/lua/tj/snippets.lua<CR>]]
+--vim.cmd [[nnoremap ,sn :e ~/plugins/nlua.nvim/lua/nlua/snippets.lua<CR>]]
 
 local charset = {}
 do -- [0-9a-zA-Z]

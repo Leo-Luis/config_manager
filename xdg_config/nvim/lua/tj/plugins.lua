@@ -26,22 +26,22 @@ return require('packer').startup {
     end
 
     -- My Plugins
-    local_use 'nlua.nvim'
+    --local_use 'nlua.nvim'
     local_use 'vlog.nvim'
-    local_use 'vim9jit'
+    -- local_use 'vim9jit'
     local_use 'colorbuddy.nvim'
     local_use 'gruvbuddy.nvim'
     local_use 'apyrori.nvim'
     local_use 'py_package.nvim'
     local_use 'manillua.nvim'
---    local_use 'cyclist.vim'
-    local_use 'bandaid.nvim'
+    -- local_use 'cyclist.vim'
+    -- local_use 'bandaid.nvim'
     local_use 'train.vim'
     local_use 'express_line.nvim'
     local_use 'overlength.vim'
     local_use 'pastery.vim'
     local_use 'command_and_conquer.nvim'
-    local_use 'streamer.nvim'
+    -- local_use 'streamer.nvim'
     local_use 'complextras.nvim'
     local_use 'astronauta.nvim'
 
