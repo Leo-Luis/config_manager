@@ -77,9 +77,9 @@ return require('packer').startup {
     local_use('nvim-telescope', 'telescope-github.nvim')
     local_use('nvim-telescope', 'telescope-symbols.nvim')
 
-    local_use 'telescope-hacks.nvim'
-    local_use 'telescope-sourcegraph.nvim'
-    local_use 'green_light.nvim'
+    -- local_use 'telescope-hacks.nvim'
+    -- local_use 'telescope-sourcegraph.nvim'
+    -- local_use 'green_light.nvim'
 
     use 'tami5/sql.nvim'
     use 'nvim-telescope/telescope-frecency.nvim'
@@ -242,8 +242,8 @@ return require('packer').startup {
       run = function() vim.cmd [[TSUpdate]] end
     }
 
-    local_use 'tree-sitter-lua'
-    local_use 'tree-sitter-sql'
+    local_use 'tjdevries/tree-sitter-lua'
+    local_use 'tjdevries/tree-sitter-sql'
 
     -- TODO: I think this may be causing large buffers to slow considerably.
     --       I also think I can just use ^X^N if I need to?...
@@ -280,7 +280,9 @@ return require('packer').startup {
 
     -- }}}
     -- TREE SITTER: {{{
-    local_use('nvim-treesitter', 'nvim-treesitter')
+    -- local_use('nvim-treesitter', 'nvim-treesitter')
+    -- Post-install/update hook with neovim command
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'nvim-treesitter/playground'
     use 'vigoux/architext.nvim'
 

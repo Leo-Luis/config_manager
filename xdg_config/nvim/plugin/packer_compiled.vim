@@ -188,10 +188,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/goyo.vim"
   },
-  ["green_light.nvim"] = {
-    loaded = true,
-    path = "/home/candy/.local/share/nvim/site/pack/packer/start/green_light.nvim"
-  },
   ["gruvbuddy.nvim"] = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/gruvbuddy.nvim"
@@ -408,17 +404,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/telescope-github.nvim"
   },
-  ["telescope-hacks.nvim"] = {
-    loaded = true,
-    path = "/home/candy/.local/share/nvim/site/pack/packer/start/telescope-hacks.nvim"
-  },
   ["telescope-packer.nvim"] = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/telescope-packer.nvim"
-  },
-  ["telescope-sourcegraph.nvim"] = {
-    loaded = true,
-    path = "/home/candy/.local/share/nvim/site/pack/packer/start/telescope-sourcegraph.nvim"
   },
   ["telescope-symbols.nvim"] = {
     loaded = true,
