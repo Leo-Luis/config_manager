@@ -282,7 +282,8 @@ return require('packer').startup {
     -- TREE SITTER: {{{
     -- local_use('nvim-treesitter', 'nvim-treesitter')
     -- Post-install/update hook with neovim command
-    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    -- use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use { 'nvim-treesitter/nvim-treesitter' }
     use 'nvim-treesitter/playground'
     use 'vigoux/architext.nvim'
 

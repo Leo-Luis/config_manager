@@ -24,10 +24,11 @@ for _, file in ipairs(vim.fn.glob("~/plugins/tree-sitter-lua/queries/lua/*.scm",
   vim.treesitter.set_query("lua", vim.fn.fnamemodify(file, ":t:r"), read_query(file))
 end
 
-vim.treesitter.set_query("rust", "highlights", read_query("~/.config/nvim/queries/rust/highlights.scm"))
+-- vim.treesitter.set_query("rust", "highlights", read_query("~/.config/nvim/queries/rust/highlights.scm"))
 
 require('nvim-treesitter.configs').setup {
-  ensure_installed = { 'go', 'rust', 'toml', 'query', },
+  -- ensure_installed = { 'go', 'rust', 'toml', 'query', },
+  ensure_installed = { 'cpp', 'css', 'html', 'query', 'javascript', 'json', 'python','typescript', 'yaml', },
 
   highlight = {
     enable = enabled, -- false will disable the whole extension
