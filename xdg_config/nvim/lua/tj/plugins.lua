@@ -43,7 +43,7 @@ return require('packer').startup {
     local_use 'tjdevries/train.vim'
     local_use 'tjdevries/command_and_conquer.nvim'
     -- local_use 'streamer.nvim'
-    local_use 'bandaid.nvim'
+    local_use 'tjdevries/bandaid.nvim'
 
     local_use 'tjdevries/nsync.nvim'
     use 'bfredl/nvim-luadev'
@@ -78,7 +78,7 @@ return require('packer').startup {
     local_use('nvim-telescope', 'telescope.nvim')
     local_use('nvim-telescope', 'telescope-fzf-writer.nvim')
     local_use('nvim-telescope', 'telescope-packer.nvim')
-    local_use('nvim-telescope', 'telescope-async-sorter-test.nvim')
+    -- local_use('nvim-telescope', 'telescope-async-sorter-test.nvim')
     local_use('nvim-telescope', 'telescope-fzy-native.nvim')
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = "make", }
 
