@@ -94,6 +94,7 @@ return require('packer').startup {
     }
 
     -- PRACTICE: {{{
+    --[[
     use 'tpope/vim-projectionist'  -- STREAM: Alternate file editting and some helpful stuff
 
     -- For narrowing regions of text to look at them alone
@@ -104,12 +105,13 @@ return require('packer').startup {
     use 'haya14busa/vim-metarepeat'  -- Never figured out how to use this, but looks like fun.
     -- }}}
     -- VIM EDITOR: {{{
+    --]]
 
     -- Hmm... I don't like that it is not tab local.
     --  I will need to investigate some more
-    if false then
-      use 'romgrk/barbar.nvim'
-    end
+    -- if false then
+    --   use 'romgrk/barbar.nvim'
+    -- end
 
     -- Little know features:
     --   :SSave
