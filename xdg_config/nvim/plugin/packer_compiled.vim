@@ -120,10 +120,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/committia.vim"
   },
-  ["completion-treesitter"] = {
-    loaded = true,
-    path = "/home/candy/.local/share/nvim/site/pack/packer/start/completion-treesitter"
-  },
   ["complextras.nvim"] = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/complextras.nvim"
@@ -160,10 +156,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/fold_search.vim"
   },
-  ["formatter.nvim"] = {
-    loaded = true,
-    path = "/home/candy/.local/share/nvim/site/pack/packer/start/formatter.nvim"
-  },
   fzf = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/fzf"
@@ -172,18 +164,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/fzf.vim"
   },
-  ["gina.vim"] = {
-    loaded = true,
-    path = "/home/candy/.local/share/nvim/site/pack/packer/start/gina.vim"
-  },
   ["git-messenger.vim"] = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/git-messenger.vim"
   },
-  ["gitsigns.nvim"] = {
-    loaded = true,
-    path = "/home/candy/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
-  },
+>>>>>>> master
   ["goyo.vim"] = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/goyo.vim"
@@ -212,9 +197,18 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/limelight.vim"
   },
+  ["lir.nvim"] = {
+    loaded = true,
+    path = "/home/tjdevries/.local/share/nvim/site/pack/packer/start/lir.nvim"
+  },
   ["lsp-status.nvim"] = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/lsp-status.nvim"
+  },
+  ["lsp-trouble.nvim"] = {
+    config = { "\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\14auto_fold\2\17auto_preview\1\nsetup\ftrouble\frequire\0" },
+    loaded = true,
+    path = "/home/tjdevries/.local/share/nvim/site/pack/packer/start/lsp-trouble.nvim"
   },
   ["lsp_extensions.nvim"] = {
     loaded = true,
@@ -235,6 +229,10 @@ _G.packer_plugins = {
   ["markdown-preview.nvim"] = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim"
+  },
+  neogit = {
+    loaded = true,
+    path = "/home/tjdevries/.local/share/nvim/site/pack/packer/start/neogit"
   },
   ["neuron.vim"] = {
     loaded = true,
@@ -292,6 +290,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
+  ["nvim-treesitter-textobjects"] = {
+    loaded = true,
+    path = "/home/tjdevries/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects"
+  },
+  ["nvim-ts-context-commentstring"] = {
+    loaded = true,
+    path = "/home/tjdevries/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
@@ -339,14 +345,6 @@ _G.packer_plugins = {
   ["rofl.nvim"] = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/rofl.nvim"
-  },
-  ["sideways.vim"] = {
-    loaded = true,
-    path = "/home/candy/.local/share/nvim/site/pack/packer/start/sideways.vim"
-  },
-  ["snippets.nvim"] = {
-    loaded = true,
-    path = "/home/candy/.local/share/nvim/site/pack/packer/start/snippets.nvim"
   },
   ["spellrotate.vim"] = {
     loaded = true,
@@ -432,10 +430,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/typescript-vim"
   },
-  ["ui.nvim"] = {
-    loaded = true,
-    path = "/home/candy/.local/share/nvim/site/pack/packer/start/ui.nvim"
-  },
   ["vader.vim"] = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/vader.vim"
@@ -451,34 +445,6 @@ _G.packer_plugins = {
   ["vim-characterize"] = {
     loaded = true,
     path = "/home/candy/.local/share/nvim/site/pack/packer/start/vim-characterize"
-  },
-  ["vim-clang-format"] = {
-    loaded = true,
-    path = "/home/candy/.local/share/nvim/site/pack/packer/start/vim-clang-format"
-  },
-  ["vim-commentary"] = {
-    loaded = true,
-    path = "/home/candy/.local/share/nvim/site/pack/packer/start/vim-commentary"
-  },
-  ["vim-devicons"] = {
-    loaded = true,
-    path = "/home/candy/.local/share/nvim/site/pack/packer/start/vim-devicons"
-  },
-  ["vim-dirvish"] = {
-    loaded = true,
-    path = "/home/candy/.local/share/nvim/site/pack/packer/start/vim-dirvish"
-  },
-  ["vim-dispatch"] = {
-    loaded = true,
-    path = "/home/candy/.local/share/nvim/site/pack/packer/start/vim-dispatch"
-  },
-  ["vim-godot"] = {
-    loaded = true,
-    path = "/home/candy/.local/share/nvim/site/pack/packer/start/vim-godot"
-  },
-  ["vim-inyoface"] = {
-    loaded = true,
-    path = "/home/candy/.local/share/nvim/site/pack/packer/start/vim-inyoface"
   },
   ["vim-javascript"] = {
     loaded = false,
@@ -584,6 +550,10 @@ _G.packer_plugins = {
 }
 
 time("Defining packer_plugins", false)
+-- Config for: lsp-trouble.nvim
+time("Config for lsp-trouble.nvim", true)
+try_loadstring("\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\14auto_fold\2\17auto_preview\1\nsetup\ftrouble\frequire\0", "config", "lsp-trouble.nvim")
+time("Config for lsp-trouble.nvim", false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
@@ -599,6 +569,19 @@ time("Sourcing ftdetect script at: /home/candy/.local/share/nvim/site/pack/packe
 time("Sourcing ftdetect script at: /home/candy/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/javascript.vim", true)
 vim.cmd [[source /home/candy/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/javascript.vim]]
 time("Sourcing ftdetect script at: /home/candy/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/javascript.vim", false)
+=======
+vim.cmd [[au FileType html ++once lua require("packer.load")({'vim-javascript'}, { ft = "html" }, _G.packer_plugins)]]
+vim.cmd [[au FileType javascript ++once lua require("packer.load")({'JavaScript-Indent', 'vim-javascript'}, { ft = "javascript" }, _G.packer_plugins)]]
+time("Defining lazy-load filetype autocommands", false)
+vim.cmd("augroup END")
+vim.cmd [[augroup filetypedetect]]
+time("Sourcing ftdetect script at: /home/tjdevries/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/flow.vim", true)
+vim.cmd [[source /home/tjdevries/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/flow.vim]]
+time("Sourcing ftdetect script at: /home/tjdevries/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/flow.vim", false)
+time("Sourcing ftdetect script at: /home/tjdevries/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/javascript.vim", true)
+vim.cmd [[source /home/tjdevries/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/javascript.vim]]
+time("Sourcing ftdetect script at: /home/tjdevries/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/javascript.vim", false)
+>>>>>>> master
 vim.cmd("augroup END")
 if should_profile then save_profiles() end
 

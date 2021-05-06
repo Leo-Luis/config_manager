@@ -4,13 +4,10 @@ if ts_debugging then
   RELOAD('nvim-treesitter')
 end
 
--- mapping of user defined captures to highlight groups
+-- :h nvim-treesitter-query-extensions
 local custom_captures = {
-  -- highlight own capture @foo.bar with highlight group "Identifier", see :h nvim-treesitter-query-extensions
-  ['foo.bar'] = 'Identifier',
   ['function.call'] = 'LuaFunctionCall',
   ['function.bracket'] = 'Type',
-
   ['namespace.type'] = 'TSNamespaceType',
 }
 
@@ -20,11 +17,7 @@ local read_query = function(filename)
   return table.concat(vim.fn.readfile(vim.fn.expand(filename)), "\n")
 end
 
-for _, file in ipairs(vim.fn.glob("~/plugins/tree-sitter-lua/queries/lua/*.scm", false, true)) do
-  vim.treesitter.set_query("lua", vim.fn.fnamemodify(file, ":t:r"), read_query(file))
-end
-
--- vim.treesitter.set_query("rust", "highlights", read_query("~/.config/nvim/queries/rust/highlights.scm"))
+vim.treesitter.set_query("rust", "highlights", read_query("~/.config/nvim/queries/rust/highlights.scm"))
 
 require('nvim-treesitter.configs').setup {
   -- ensure_installed = { 'go', 'rust', 'toml', 'query', },
@@ -69,6 +62,50 @@ require('nvim-treesitter.configs').setup {
     },
   },
 
+  context_commentstring = {
+    enable = true,
+    config = {
+      -- TODO: Figure this out or wait for Conni to do it for me
+      -- just like the rest of my open source work.
+      c   = '// %s',
+      lua = '-- %s',
+    },
+  },
+
+  textobjects = {
+    select = {
+      enable = true,
+      -- disable = { 'lua' },
+      keymaps = {
+        ['af'] = '@function.outer',
+        ['if'] = '@function.inner',
+
+        ['ac'] = '@conditional.outer',
+        ['ic'] = '@conditional.inner',
+
+        ['aa'] = '@parameter.outer',
+        ['ia'] = '@parameter.inner',
+      },
+    },
+
+    -- TODO: Could be interesting to do things w/ lists?
+    -- TODO: Need to think of the right prefix for this.
+    --          Almost wonder if I should go in an operator pending style
+    --          thing here?... until I stop holding things.
+    --
+    --          Could do special stuff w/ my keyboard too :)
+    swap = {
+      enable = true,
+      swap_next = {
+        ["<M-s><M-p>"] = "@parameter.inner",
+        ["<M-s>f"] = "@function.outer",
+      },
+      swap_previous = {
+        ["<M-s><M-P>"] = "@parameter.inner",
+        ["<M-s>F"] = "@function.outer",
+      },
+    },
+  },
   -- textobjects = { -- syntax-aware textobjects
   --   enable = true,
   --   disable = {},
@@ -84,8 +121,6 @@ require('nvim-treesitter.configs').setup {
   --     ['if'] = '@function.inner',
   --     ['aC'] = '@class.outer',
   --     ['iC'] = '@class.inner',
-  --     ['ac'] = '@conditional.outer',
-  --     ['ic'] = '@conditional.inner',
   --     ['ae'] = '@block.outer',
   --     ['ie'] = '@block.inner',
   --     ['al'] = '@loop.outer',
