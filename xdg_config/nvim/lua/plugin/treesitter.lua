@@ -17,7 +17,7 @@ local read_query = function(filename)
   return table.concat(vim.fn.readfile(vim.fn.expand(filename)), "\n")
 end
 
-vim.treesitter.set_query("rust", "highlights", read_query("~/.config/nvim/queries/rust/highlights.scm"))
+-- vim.treesitter.set_query("rust", "highlights", read_query("~/.config/nvim/queries/rust/highlights.scm"))
 
 require('nvim-treesitter.configs').setup {
   -- ensure_installed = { 'go', 'rust', 'toml', 'query', },

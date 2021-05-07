@@ -43,7 +43,7 @@ return require('packer').startup {
     local_use 'tjdevries/train.vim'
     local_use 'tjdevries/command_and_conquer.nvim'
     -- local_use 'streamer.nvim'
-    local_use 'tjdevries/bandaid.nvim'
+    -- local_use 'tjdevries/bandaid.nvim'
 
     local_use 'tjdevries/nsync.nvim'
     use 'bfredl/nvim-luadev'
@@ -235,6 +235,7 @@ return require('packer').startup {
 
     use 'hrsh7th/vim-vsnip'
     use 'hrsh7th/vim-vsnip-integ'
+    use "rafamadriz/friendly-snippets"
     -- use 'norcalli/snippets.nvim'
 
     -- Cool tags based viewer

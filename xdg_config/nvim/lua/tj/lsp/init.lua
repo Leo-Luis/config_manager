@@ -177,11 +177,11 @@ end
 --  },
 --}
 
-lspconfig.gdscript.setup {
-  on_init = custom_init,
-  on_attach = custom_attach,
-  capabilities = updated_capabilities,
-}
+-- lspconfig.gdscript.setup {
+--   on_init = custom_init,
+--   on_attach = custom_attach,
+--   capabilities = updated_capabilities,
+-- }
 
 -- Load lua configuration from nlua.
 require('nlua.lsp.nvim').setup(lspconfig, {
