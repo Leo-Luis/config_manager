@@ -184,27 +184,27 @@ return require('packer').startup {
     -- }}}
     --  LANGUAGE: {{{
     -- TODO: Should check on these if they are the best ones
-    use 'neovimhaskell/haskell-vim'
-    use 'justinmk/vim-syntax-extra'
-    use 'elzr/vim-json'
-    use 'goodell/vim-mscgen'
-    use 'pearofducks/ansible-vim'
-    use 'PProvost/vim-ps1'
-    use 'cespare/vim-toml'
-    use 'Glench/Vim-Jinja2-Syntax'
+    --use 'neovimhaskell/haskell-vim'
+    --use 'justinmk/vim-syntax-extra'
+    --use 'elzr/vim-json'
+    --use 'goodell/vim-mscgen'
+    --use 'pearofducks/ansible-vim'
+    --use 'PProvost/vim-ps1'
+    --use 'cespare/vim-toml'
+    --use 'Glench/Vim-Jinja2-Syntax'
 
     -- Can add back if we ever use it.
     -- use 'JuliaEditorSupport/julia-vim'
 
-    use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install'  }
+    --use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install'  }
 
     -- Typescript {{{
     -- TODO: Should probably only load these when necessary.
     -- TODO: Should prboably check if these work for typescript, typescript.tsx, etc.
-    use 'jelera/vim-javascript-syntax'
-    use 'othree/javascript-libraries-syntax.vim'
-    use 'leafgarland/typescript-vim'
-    use 'peitalin/vim-jsx-typescript'
+    --use 'jelera/vim-javascript-syntax'
+    --use 'othree/javascript-libraries-syntax.vim'
+    --use 'leafgarland/typescript-vim'
+    --use 'peitalin/vim-jsx-typescript'
 
     -- Wonder if I can make LSP do this and respect .prettier files.
     --  I don't write enough typescript to think about this.
@@ -213,12 +213,12 @@ return require('packer').startup {
     -- TODO: Turn emmet back on when I someday use it
     -- use 'mattn/emmet-vim'
 
-    use { 'vim-scripts/JavaScript-Indent', ft = 'javascript' }
-    use { 'pangloss/vim-javascript', ft = { 'javascript', 'html' } }
+    --use { 'vim-scripts/JavaScript-Indent', ft = 'javascript' }
+    --use { 'pangloss/vim-javascript', ft = { 'javascript', 'html' } }
     use 'tpope/vim-liquid'
     -- }}}
     -- Godot {{{
-    use 'habamax/vim-godot'
+    --use 'habamax/vim-godot'
     -- }}}
     -- Lisp {{{
     -- use { 'eraserhd/parinfer-rust', run = 'cargo build --release' }
@@ -253,7 +253,7 @@ return require('packer').startup {
     use 'mfussenegger/nvim-dap-python'
     use 'nvim-telescope/telescope-dap.nvim'
 
-    use 'jbyuki/one-small-step-for-vimkind'
+    --use 'jbyuki/one-small-step-for-vimkind'
 
     if false and has 'python3' then
       use 'puremourning/vimspector'
@@ -277,14 +277,14 @@ return require('packer').startup {
     -- }}}
     -- NAVIGATION: {{{
     -- STREAM: Show off edit_alternate.vim
-    use 'tjdevries/edit_alternate.vim'
+    --use 'tjdevries/edit_alternate.vim'
 
-    use 'google/vim-searchindex'
+    --use 'google/vim-searchindex'
 
     -- use 'justinmk/vim-dirvish'
     use 'tamago324/lir.nvim'
 
-    use 'pechorin/any-jump.vim'
+    --use 'pechorin/any-jump.vim'
 
     -- Temporary disabled... getting real bad performance in some lua files.
     --  Might just disable for Lua only?...
@@ -305,8 +305,8 @@ return require('packer').startup {
     use 'tpope/vim-surround'       -- Surround text objects easily
 
     -- Do I even use any of these?
-    use 'kana/vim-textobj-user'
-    use 'bps/vim-textobj-python'
+    --use 'kana/vim-textobj-user'
+    --use 'bps/vim-textobj-python'
     -- }}}
     -- Python: {{{
 
@@ -316,7 +316,7 @@ return require('packer').startup {
     -- GIT: {{{
     -- gita replacement
     -- use 'lambdalisue/gina.vim'
-    use 'TimUntersberger/neogit'
+    --use 'TimUntersberger/neogit'
 
 
     -- Github integration
@@ -324,10 +324,10 @@ return require('packer').startup {
     --use 'ruifm/gitlinker.nvim'
 
     -- Sweet message committer
-    use 'rhysd/committia.vim'
+    --use 'rhysd/committia.vim'
 
     -- Floating windows are awesome :)
-    use 'rhysd/git-messenger.vim'
+    --use 'rhysd/git-messenger.vim'
 
     -- Async signs!
     if has 'nvim-0.5' then
