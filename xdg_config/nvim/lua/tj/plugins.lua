@@ -72,10 +72,14 @@ return require('packer').startup {
     -- TODO: Investigate
     -- use 'jose-elias-alvarez/nvim-lsp-ts-utils'
 
-    local_use('nvim-lua', 'popup.nvim')
-    local_use('nvim-lua', 'plenary.nvim')
+    --local_use('nvim-lua', 'popup.nvim')
+    --local_use('nvim-lua', 'plenary.nvim')
 
-    local_use('nvim-telescope', 'telescope.nvim')
+    --local_use('nvim-telescope', 'telescope.nvim')
+    use {
+      'nvim-telescope/telescope.nvim',
+      requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+    }
     local_use('nvim-telescope', 'telescope-fzf-writer.nvim')
     local_use('nvim-telescope', 'telescope-packer.nvim')
     -- local_use('nvim-telescope', 'telescope-async-sorter-test.nvim')
@@ -102,17 +106,15 @@ return require('packer').startup {
     }
 
     -- PRACTICE: {{{
-    --[[
     use 'tpope/vim-projectionist'  -- STREAM: Alternate file editting and some helpful stuff
 
     -- For narrowing regions of text to look at them alone
-    use 'chrisbra/NrrwRgn' -- Figure out some good ways to use this on stream
+    --use 'chrisbra/NrrwRgn' -- Figure out some good ways to use this on stream
 
-    use 'tweekmonster/spellrotate.vim'
-    use 'haya14busa/vim-metarepeat'  -- Never figured out how to use this, but looks like fun.
+    --use 'tweekmonster/spellrotate.vim'
+    --use 'haya14busa/vim-metarepeat'  -- Never figured out how to use this, but looks like fun.
     -- }}}
     -- VIM EDITOR: {{{
-    --]]
 
     -- Little know features:
     --   :SSave
@@ -277,7 +279,7 @@ return require('packer').startup {
     -- }}}
     -- NAVIGATION: {{{
     -- STREAM: Show off edit_alternate.vim
-    --use 'tjdevries/edit_alternate.vim'
+    use 'tjdevries/edit_alternate.vim'
 
     --use 'google/vim-searchindex'
 
@@ -316,7 +318,7 @@ return require('packer').startup {
     -- GIT: {{{
     -- gita replacement
     -- use 'lambdalisue/gina.vim'
-    --use 'TimUntersberger/neogit'
+    use 'TimUntersberger/neogit'
 
 
     -- Github integration
