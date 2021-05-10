@@ -30,14 +30,14 @@ return require('packer').startup {
     -- local_use 'vim9jit'
     local_use 'tjdevries/colorbuddy.nvim'
     local_use 'tjdevries/gruvbuddy.nvim'
-    local_use 'tjdevries/apyrori.nvim'
+    use 'tjdevries/apyrori.nvim'
     local_use 'tjdevries/manillua.nvim'
     -- local_use 'cyclist.vim'
-    local_use 'tjdevries/express_line.nvim'
+    use 'tjdevries/express_line.nvim'
     local_use 'tjdevries/overlength.vim'
     local_use 'tjdevries/pastery.vim'
-    local_use 'tjdevries/complextras.nvim'
-    local_use 'tjdevries/astronauta.nvim'
+    use 'tjdevries/complextras.nvim'
+    use 'tjdevries/astronauta.nvim'
 
     -- When I have some extra time...
     local_use 'tjdevries/train.vim'
@@ -271,7 +271,7 @@ return require('packer').startup {
     use 'JoosepAlviste/nvim-ts-context-commentstring'
 
     -- Grammars
-    local_use 'tree-sitter-lua'
+    use 'tree-sitter-lua'
     local_use 'tree-sitter-sql'
 
     -- }}}
