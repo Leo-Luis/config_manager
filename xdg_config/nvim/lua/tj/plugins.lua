@@ -26,26 +26,26 @@ return require('packer').startup {
     end
 
     -- My Plugins
-    local_use 'tjdevries/nlua.nvim'
-    -- local_use 'vim9jit'
-    local_use 'tjdevries/colorbuddy.nvim'
-    local_use 'tjdevries/gruvbuddy.nvim'
+    use 'tjdevries/nlua.nvim'
+    -- use 'vim9jit'
+    use 'tjdevries/colorbuddy.nvim'
+    use 'tjdevries/gruvbuddy.nvim'
     use 'tjdevries/apyrori.nvim'
-    local_use 'tjdevries/manillua.nvim'
-    -- local_use 'cyclist.vim'
+    use 'tjdevries/manillua.nvim'
+    -- use 'cyclist.vim'
     use 'tjdevries/express_line.nvim'
-    local_use 'tjdevries/overlength.vim'
-    local_use 'tjdevries/pastery.vim'
+    use 'tjdevries/overlength.vim'
+    use 'tjdevries/pastery.vim'
     use 'tjdevries/complextras.nvim'
     use 'tjdevries/astronauta.nvim'
 
     -- When I have some extra time...
-    local_use 'tjdevries/train.vim'
-    local_use 'tjdevries/command_and_conquer.nvim'
-    -- local_use 'streamer.nvim'
-    -- local_use 'tjdevries/bandaid.nvim'
+    use 'tjdevries/train.vim'
+    use 'tjdevries/command_and_conquer.nvim'
+    -- use 'streamer.nvim'
+    -- use 'tjdevries/bandaid.nvim'
 
-    local_use 'tjdevries/nsync.nvim'
+    use 'tjdevries/nsync.nvim'
     use 'bfredl/nvim-luadev'
 
     -- LSP Plugins:
@@ -54,7 +54,7 @@ return require('packer').startup {
     use 'neovim/nvim-lspconfig'
     use 'wbthomason/lsp-status.nvim'
 
-    local_use 'tjdevries/lsp_extensions.nvim'
+    use 'tjdevries/lsp_extensions.nvim'
     use 'glepnir/lspsaga.nvim'
     use 'onsails/lspkind-nvim'
 
@@ -73,18 +73,18 @@ return require('packer').startup {
       'nvim-telescope/telescope.nvim',
       requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
     }
-    local_use('nvim-telescope', 'telescope-fzf-writer.nvim')
-    local_use('nvim-telescope', 'telescope-packer.nvim')
-    -- local_use('nvim-telescope', 'telescope-async-sorter-test.nvim')
-    local_use('nvim-telescope', 'telescope-fzy-native.nvim')
+    use('nvim-telescope', 'telescope-fzf-writer.nvim')
+    use('nvim-telescope', 'telescope-packer.nvim')
+    -- use('nvim-telescope', 'telescope-async-sorter-test.nvim')
+    --use('nvim-telescope', 'telescope-fzy-native.nvim')
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = "make", }
 
-    local_use('nvim-telescope', 'telescope-github.nvim')
-    local_use('nvim-telescope', 'telescope-symbols.nvim')
+    use('nvim-telescope', 'telescope-github.nvim')
+    use('nvim-telescope', 'telescope-symbols.nvim')
 
-    -- local_use 'telescope-hacks.nvim'
-    -- local_use 'telescope-sourcegraph.nvim'
-    -- local_use 'green_light.nvim'
+    -- use 'telescope-hacks.nvim'
+    -- use 'telescope-sourcegraph.nvim'
+    -- use 'green_light.nvim'
 
     use 'tami5/sql.nvim'
     use 'nvim-telescope/telescope-frecency.nvim'
@@ -199,7 +199,7 @@ return require('packer').startup {
     use 'hrsh7th/nvim-compe'
 
     -- Completion stuff
-    local_use 'rofl.nvim'
+    use 'rofl.nvim'
 
     use 'hrsh7th/vim-vsnip'
     use 'hrsh7th/vim-vsnip-integ'
@@ -236,7 +236,7 @@ return require('packer').startup {
     -- TREE SITTER: {{{
     -- Post-install/update hook with neovim command
     -- use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-    local_use('nvim-treesitter', 'nvim-treesitter')
+    use('nvim-treesitter', 'nvim-treesitter')
     use 'nvim-treesitter/nvim-treesitter-textobjects'
     use 'nvim-treesitter/playground'
     use 'vigoux/architext.nvim'
@@ -245,7 +245,7 @@ return require('packer').startup {
 
     -- Grammars
     use 'tree-sitter-lua'
-    local_use 'tree-sitter-sql'
+    use 'tree-sitter-sql'
 
     -- }}}
     -- NAVIGATION: {{{
@@ -329,7 +329,7 @@ return require('packer').startup {
     use 'alec-gibson/nvim-tetris'
 
     -- WIP:
-    local_use 'py_package.nvim'
+    use 'py_package.nvim'
 
     -- TODO: Figure out why this randomly popups
     --       Figure out if I want to use it later as well :)
@@ -347,11 +347,11 @@ return require('packer').startup {
 
 
     -- It would be fun to think about making a wiki again...
-    -- local_use 'wander.nvim'
-    -- local_use 'riki.nvim'
+    -- use 'wander.nvim'
+    -- use 'riki.nvim'
 
     -- pretty sure I'm done w/ these
-    -- local_use 'vlog.nvim'
+    -- use 'vlog.nvim'
   end,
   config = {
     display = {
