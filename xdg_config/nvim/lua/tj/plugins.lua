@@ -69,13 +69,6 @@ return require('packer').startup {
       end,
     }
 
-    -- TODO: Investigate
-    -- use 'jose-elias-alvarez/nvim-lsp-ts-utils'
-
-    --local_use('nvim-lua', 'popup.nvim')
-    --local_use('nvim-lua', 'plenary.nvim')
-
-    --local_use('nvim-telescope', 'telescope.nvim')
     use {
       'nvim-telescope/telescope.nvim',
       requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
@@ -186,27 +179,8 @@ return require('packer').startup {
     -- }}}
     --  LANGUAGE: {{{
     -- TODO: Should check on these if they are the best ones
-    --use 'neovimhaskell/haskell-vim'
-    --use 'justinmk/vim-syntax-extra'
-    --use 'elzr/vim-json'
-    --use 'goodell/vim-mscgen'
-    --use 'pearofducks/ansible-vim'
-    --use 'PProvost/vim-ps1'
-    --use 'cespare/vim-toml'
-    --use 'Glench/Vim-Jinja2-Syntax'
-
-    -- Can add back if we ever use it.
-    -- use 'JuliaEditorSupport/julia-vim'
-
     --use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install'  }
 
-    -- Typescript {{{
-    -- TODO: Should probably only load these when necessary.
-    -- TODO: Should prboably check if these work for typescript, typescript.tsx, etc.
-    --use 'jelera/vim-javascript-syntax'
-    --use 'othree/javascript-libraries-syntax.vim'
-    --use 'leafgarland/typescript-vim'
-    --use 'peitalin/vim-jsx-typescript'
 
     -- Wonder if I can make LSP do this and respect .prettier files.
     --  I don't write enough typescript to think about this.
@@ -219,14 +193,6 @@ return require('packer').startup {
     --use { 'pangloss/vim-javascript', ft = { 'javascript', 'html' } }
     use 'tpope/vim-liquid'
     -- }}}
-    -- Godot {{{
-    --use 'habamax/vim-godot'
-    -- }}}
-    -- Lisp {{{
-    -- use { 'eraserhd/parinfer-rust', run = 'cargo build --release' }
-    -- }}}
-    --  }}}
-    -- LSP {{{
 
     -- STREAM: Figure out how to use snippets better
     -- use 'haorenW1025/completion-nvim'
@@ -237,6 +203,11 @@ return require('packer').startup {
 
     use 'hrsh7th/vim-vsnip'
     use 'hrsh7th/vim-vsnip-integ'
+    --  ES7 React/Redux/GraphQL/React-Native snippets
+    --Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile && yarn compile' }
+    use {
+      'dsznajder/vscode-es7-javascript-react-snippets', run = 'yarn install --frozen-lockfile && yarn compile'
+    }
     use "rafamadriz/friendly-snippets"
     -- use 'norcalli/snippets.nvim'
 
