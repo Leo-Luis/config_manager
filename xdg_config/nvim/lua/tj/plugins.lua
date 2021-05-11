@@ -26,26 +26,26 @@ return require('packer').startup {
     end
 
     -- My Plugins
-    use 'tjdevries/nlua.nvim'
-    -- use 'vim9jit'
-    use 'tjdevries/colorbuddy.nvim'
-    use 'tjdevries/gruvbuddy.nvim'
-    use 'tjdevries/apyrori.nvim'
-    use 'tjdevries/manillua.nvim'
-    -- use 'cyclist.vim'
-    use 'tjdevries/express_line.nvim'
-    use 'tjdevries/overlength.vim'
-    use 'tjdevries/pastery.vim'
-    use 'tjdevries/complextras.nvim'
-    use 'tjdevries/astronauta.nvim'
+    local_use 'tjdevries/nlua.nvim'
+    -- local_use 'vim9jit'
+    local_use 'tjdevries/colorbuddy.nvim'
+    local_use 'tjdevries/gruvbuddy.nvim'
+    local_use 'tjdevries/apyrori.nvim'
+    local_use 'tjdevries/manillua.nvim'
+    -- local_use 'cyclist.vim'
+    local_use 'tjdevries/express_line.nvim'
+    local_use 'tjdevries/overlength.vim'
+    local_use 'tjdevries/pastery.vim'
+    local_use 'tjdevries/complextras.nvim'
+    local_use 'tjdevries/astronauta.nvim'
 
     -- When I have some extra time...
-    use 'tjdevries/train.vim'
-    use 'tjdevries/command_and_conquer.nvim'
-    -- use 'streamer.nvim'
-    -- use 'tjdevries/bandaid.nvim'
+    local_use 'tjdevries/train.vim'
+    local_use 'tjdevries/command_and_conquer.nvim'
+    -- local_use 'streamer.nvim'
+    -- local_use 'tjdevries/bandaid.nvim'
 
-    use 'tjdevries/nsync.nvim'
+    local_use 'tjdevries/nsync.nvim'
     use 'bfredl/nvim-luadev'
 
     -- LSP Plugins:
@@ -54,7 +54,7 @@ return require('packer').startup {
     use 'neovim/nvim-lspconfig'
     use 'wbthomason/lsp-status.nvim'
 
-    use 'tjdevries/lsp_extensions.nvim'
+    local_use 'tjdevries/lsp_extensions.nvim'
     use 'glepnir/lspsaga.nvim'
     use 'onsails/lspkind-nvim'
 
@@ -69,22 +69,29 @@ return require('packer').startup {
       end,
     }
 
+    -- TODO: Investigate
+    -- use 'jose-elias-alvarez/nvim-lsp-ts-utils'
+
+    --local_use('nvim-lua', 'popup.nvim')
+    --local_use('nvim-lua', 'plenary.nvim')
+
+    --local_use('nvim-telescope', 'telescope.nvim')
     use {
       'nvim-telescope/telescope.nvim',
       requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
     }
-    use('nvim-telescope', 'telescope-fzf-writer.nvim')
-    use('nvim-telescope', 'telescope-packer.nvim')
-    -- use('nvim-telescope', 'telescope-async-sorter-test.nvim')
-    --use('nvim-telescope', 'telescope-fzy-native.nvim')
+    local_use('nvim-telescope', 'telescope-fzf-writer.nvim')
+    local_use('nvim-telescope', 'telescope-packer.nvim')
+    -- local_use('nvim-telescope', 'telescope-async-sorter-test.nvim')
+    local_use('nvim-telescope', 'telescope-fzy-native.nvim')
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = "make", }
 
-    use('nvim-telescope', 'telescope-github.nvim')
-    use('nvim-telescope', 'telescope-symbols.nvim')
+    local_use('nvim-telescope', 'telescope-github.nvim')
+    local_use('nvim-telescope', 'telescope-symbols.nvim')
 
-    -- use 'telescope-hacks.nvim'
-    -- use 'telescope-sourcegraph.nvim'
-    -- use 'green_light.nvim'
+    -- local_use 'telescope-hacks.nvim'
+    -- local_use 'telescope-sourcegraph.nvim'
+    -- local_use 'green_light.nvim'
 
     use 'tami5/sql.nvim'
     use 'nvim-telescope/telescope-frecency.nvim'
@@ -124,7 +131,7 @@ return require('packer').startup {
     use 'norcalli/nvim-colorizer.lua'
     use 'norcalli/nvim-terminal.lua'
 
-    -- Make comments appear IN YO FACE
+    -- Make comments appear IN Y FACE
     use 'tjdevries/vim-inyoface'
 
     -- Show only what you're searching for.
@@ -179,8 +186,27 @@ return require('packer').startup {
     -- }}}
     --  LANGUAGE: {{{
     -- TODO: Should check on these if they are the best ones
+    --use 'neovimhaskell/haskell-vim'
+    --use 'justinmk/vim-syntax-extra'
+    --use 'elzr/vim-json'
+    --use 'goodell/vim-mscgen'
+    --use 'pearofducks/ansible-vim'
+    --use 'PProvost/vim-ps1'
+    --use 'cespare/vim-toml'
+    --use 'Glench/Vim-Jinja2-Syntax'
+
+    -- Can add back if we ever use it.
+    -- use 'JuliaEditorSupport/julia-vim'
+
     --use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install'  }
 
+    -- Typescript {{{
+    -- TODO: Should probably only load these when necessary.
+    -- TODO: Should prboably check if these work for typescript, typescript.tsx, etc.
+    --use 'jelera/vim-javascript-syntax'
+    --use 'othree/javascript-libraries-syntax.vim'
+    --use 'leafgarland/typescript-vim'
+    --use 'peitalin/vim-jsx-typescript'
 
     -- Wonder if I can make LSP do this and respect .prettier files.
     --  I don't write enough typescript to think about this.
@@ -193,18 +219,24 @@ return require('packer').startup {
     --use { 'pangloss/vim-javascript', ft = { 'javascript', 'html' } }
     use 'tpope/vim-liquid'
     -- }}}
+    -- Godot {{{
+    --use 'habamax/vim-godot'
+    -- }}}
+    -- Lisp {{{
+    -- use { 'eraserhd/parinfer-rust', run = 'cargo build --release' }
+    -- }}}
+    --  }}}
+    -- LSP {{{
 
     -- STREAM: Figure out how to use snippets better
     -- use 'haorenW1025/completion-nvim'
     use 'hrsh7th/nvim-compe'
 
     -- Completion stuff
-    use 'rofl.nvim'
+    local_use 'rofl.nvim'
 
     use 'hrsh7th/vim-vsnip'
     use 'hrsh7th/vim-vsnip-integ'
-    --  ES7 React/Redux/GraphQL/React-Native snippets
-    --Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile && yarn compile' }
     use {
       'dsznajder/vscode-es7-javascript-react-snippets', run = 'yarn install --frozen-lockfile && yarn compile'
     }
@@ -236,7 +268,7 @@ return require('packer').startup {
     -- TREE SITTER: {{{
     -- Post-install/update hook with neovim command
     -- use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-    use('nvim-treesitter', 'nvim-treesitter')
+    local_use('nvim-treesitter', 'nvim-treesitter')
     use 'nvim-treesitter/nvim-treesitter-textobjects'
     use 'nvim-treesitter/playground'
     use 'vigoux/architext.nvim'
@@ -244,8 +276,8 @@ return require('packer').startup {
     use 'JoosepAlviste/nvim-ts-context-commentstring'
 
     -- Grammars
-    use 'tree-sitter-lua'
-    use 'tree-sitter-sql'
+    local_use 'tree-sitter-lua'
+    local_use 'tree-sitter-sql'
 
     -- }}}
     -- NAVIGATION: {{{
@@ -329,7 +361,7 @@ return require('packer').startup {
     use 'alec-gibson/nvim-tetris'
 
     -- WIP:
-    use 'py_package.nvim'
+    local_use 'py_package.nvim'
 
     -- TODO: Figure out why this randomly popups
     --       Figure out if I want to use it later as well :)
@@ -347,11 +379,11 @@ return require('packer').startup {
 
 
     -- It would be fun to think about making a wiki again...
-    -- use 'wander.nvim'
-    -- use 'riki.nvim'
+    -- local_use 'wander.nvim'
+    -- local_use 'riki.nvim'
 
     -- pretty sure I'm done w/ these
-    -- use 'vlog.nvim'
+    -- local_use 'vlog.nvim'
   end,
   config = {
     display = {
